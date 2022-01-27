@@ -6,25 +6,25 @@ public class main {
 
     public static void main(String[] args) {
 
-        Scanner player = new Scanner(System.in);
+        Scanner sss = new Scanner(System.in);
 
-        player rapper = new player();
+        //player rapper = new player();
 
         System.out.println("Well " + tutorial.Intro() + ", it's nice to meet you.");
 
+        tutorial.I();
         if(tutorial.I() == "1") {
-            rapper.stats();
-
-            /*
-            Call this function in instance
-            */
-
+            player.stats();
         }
 
         tutorial.LastDialogue();
         
         System.out.println("READ ME DEVELOPER");
         /*
+
+        1/25/2022: Get rid of the majority of the static keywords in tutorial and player
+
+
         Make sure to put this entire tutorial into a seperate class/function and just run it here in main. In addition, make sure to actually TAKE IN the user input so that they can type in what action they want to carry out.
         To do list:
         -Add weekly competition on Friday nights

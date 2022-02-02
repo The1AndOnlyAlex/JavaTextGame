@@ -1,27 +1,34 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class main {
 
     static String input = "empty";
+    static boolean gameEnd = false;
 
     public static void main(String[] args) {
 
-        Scanner sss = new Scanner(System.in);
+        //Scanner sss = new Scanner(System.in);
 
-        //player rapper = new player();
-
-        System.out.println("Well " + tutorial.Intro() + ", it's nice to meet you.");
-
-        tutorial.I();
-        if(tutorial.I() == "1") {
-            player.stats();
+        String introValue = tutorial.Intro1();
+        System.out.println("Well " + introValue + ", it's nice to meet you.");
+        player.name = introValue;
+        tutorial.Intro2();
+        player.stats();
+        tutorial.Intro3();
+        
+        while(gameEnd != false) {
+            player.action();
         }
 
-        tutorial.LastDialogue();
-        
-        System.out.println("READ ME DEVELOPER");
-        /*
+        if(1 == 1) {
+            //Win Game
+        }
+        else {
+            //Lose Game
+        }
 
+
+        /*
         1/25/2022: Get rid of the majority of the static keywords in tutorial and player
 
 

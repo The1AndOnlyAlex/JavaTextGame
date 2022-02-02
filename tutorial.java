@@ -12,7 +12,7 @@ public class tutorial {
         player.close();
     }
 
-    public static String Intro() {
+    public static String Intro1() {
 
        
         System.out.println("Hello there aspiring rapper! (Enter to continue)");
@@ -35,7 +35,7 @@ public class tutorial {
 
     }
 
-    public static String I() {
+    public static String Intro2() {
 
         //Scanner player = new Scanner(System.in);
         System.out.println(
@@ -46,8 +46,9 @@ public class tutorial {
         input = player.nextLine();
         System.out.println("Stats: Enter \"1\" \n Practice: Enter \"2\" \n Move: Enter \"3\" \n Purchase: Enter \"4\" \n Record Label: Enter \"5\"");
         System.out.println("Check your current stats right now by typing in \"1\". \n");
+        input = player.nextLine();
 
-        while(input != "1") {
+        while(Integer.parseInt(input) != 1) {
             System.out.println("Please type in 1 for now.");
             input = player.nextLine();
         }
@@ -56,7 +57,7 @@ public class tutorial {
 
     }
 
-    public static void LastDialogue() {
+    public static void Intro3() {
 
         //Scanner player = new Scanner(System.in);
         System.out.println("\n Great!");
@@ -65,11 +66,11 @@ public class tutorial {
         input = player.nextLine();
         System.out.println("You can practice whenever you want.");
         input = player.nextLine();
-        System.out.println("Just head home by typing 'p.move(home)'.");
+        System.out.println("Just head home by entering 3 followed by the word home.");
         input = player.nextLine();
-        System.out.println("Then you can practice your rapping by then typing 'p.practice(rap)'.");
+        System.out.println("Then you can practice your rapping by then entering 2 followed by the word rap.");
         input = player.nextLine();
-        System.out.println("Well, looks like you're good to go! Make sure to keep an eye on time and come meet me at the club at 21 (Military time) by typing in 'p.go(club)'.");
+        System.out.println("Well, looks like you're good to go! Make sure to keep an eye on time and come meet me at the club at 21 (Military time) by typing in 3 followed by the word club.");
         //player.close();
 
     }

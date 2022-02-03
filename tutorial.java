@@ -14,7 +14,6 @@ public class tutorial {
 
     public static String Intro1() {
 
-       
         System.out.println("Hello there aspiring rapper! (Enter to continue)");
         input = player.nextLine();
 

@@ -4,7 +4,7 @@ public class player {
     
     static public String dialogue = "empty";
     static public String name = "Tu";
-    static public  int fame = 0;
+    static public int fame = 0;
     static public int cash = 100;
     static public int skill = 1;
     static public int combat = 1;
@@ -24,7 +24,7 @@ public class player {
         // Scanner player = new Scanner(System.in);
 
         System.out.println(
-                "Stats: Enter \"1\" \n Practice: Enter \"2\" \n Move: Enter \"3\" \n Purchase: Enter \"4\" \n Record Label: Enter \"5\"");
+                "Stats: Enter \"1\" \n Practice: Enter \"2\" \n Move: Enter \"3\" \n Purchase: Enter \"4\" \n Record Label: Enter \"5\" \n Time: Enter \"6\" \n");
         input = player.nextLine();
 
         if(Integer.parseInt(input) == 1) {
@@ -42,7 +42,10 @@ public class player {
         else if(Integer.parseInt(input) == 5) {
             rlSign();
         }
-        else {System.out.println("Invalid. Please make sure to type in either \"1\", \"2\", \"3\", \"4\", or \"5\". \n");}
+        else if(Integer.parseInt(input) == 6) {
+            System.out.println("The time is: " + time);
+        }
+        else {System.out.println("Invalid. Please make sure to type in either \"1\", \"2\", \"3\", \"4\", \"5\", or \"6\". \n");}
 
         //player.close();
 
@@ -79,14 +82,14 @@ public class player {
         else {skillGain = 1;}
         
         if ((Integer.parseInt(input) == 1)&&(location == "home")) {
-            System.out.println("You practiced your rap for an hour and gained " + skillGain + " skill! \n");
             skill = skill + skillGain;
             time ++;
+            System.out.println("You practiced your rap for an hour and gained " + skillGain + " skill! \n The time is now " + time + "\n");
         }
         else if ((Integer.parseInt(input) == 2)&&(location == "gym")) {
-            System.out.println("You practiced your rap for an hour and gained 1 combat! \n");
             combat ++;
             time ++;
+            System.out.println("You practiced your rap for an hour and gained 1 combat! \n The time is now " + time + "\n");
         }
         else {System.out.println("Invalid. Please make sure to type in either \"1\" at home or \"2\" with an activated gym membership. \n");}
 
@@ -106,14 +109,15 @@ public class player {
 
         if (Integer.parseInt(input) == 1) {
             location = "home";
-            System.out.println("Arrived at your home \n");
             time++;
+            System.out.println("Arrived at your home \n The time is now " + time + "\n");
         }
         else if ((Integer.parseInt(input) == 2)&&(time >= 21)&&(time <= 24)) {
             location = "club";
             System.out.println("Arrived at the club \n");
-            time++;
-            System.out.println("You finished your performance and accumulated a total of " + events.clubPerform(fame, skill) + "fans!");
+            System.out.println("You finished your performance and accumulated a total of " + events.clubPerform(fame, skill) + "fans! \n You go home and sleep for the night. \n");
+            time = 6;
+            System.out.println("The time is now " + time + "\n");
         }
         else if ((Integer.parseInt(input) == 3)&&(gym_membership == true)&&(time >= 6)&&(time <= 12)) {
             location = "Arrived at the gym \n";

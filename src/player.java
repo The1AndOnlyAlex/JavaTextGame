@@ -43,7 +43,7 @@ public class player {
             rlSign();
         }
         else if(Integer.parseInt(input) == 6) {
-            System.out.println("The time is: " + time);
+            System.out.println("The time is: " + time + " (Military Time) \n");
         }
         else {System.out.println("Invalid. Please make sure to type in either \"1\", \"2\", \"3\", \"4\", \"5\", or \"6\". \n");}
 
@@ -123,7 +123,10 @@ public class player {
             location = "Arrived at the gym \n";
             time++;
         }
-        else {System.out.println("Invalid. Please type in either \"1\", \"2\", or \"3\". (The club is only available in the evening from 21 to 24 and the gym is only available if you have an activated gym membership.) \n");}
+        else {
+            System.out.println("Invalid. Please type in either \"1\", \"2\", or \"3\". (The club is only available in the evening from 21 to 24 and the gym is only available if you have an activated gym membership.) \n");
+            System.out.println("The time is " + time);
+        }
 
         if (time == 25) {
             time = 1;

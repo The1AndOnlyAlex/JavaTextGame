@@ -45,12 +45,32 @@ public class tutorial {
         input = player.nextLine();
         System.out.println("Stats: Enter \"1\" \n Practice: Enter \"2\" \n Move: Enter \"3\" \n Purchase: Enter \"4\" \n Record Label: Enter \"5\"");
         System.out.println("Check your current stats right now by typing in \"1\". \n");
-        input = player.nextLine();
 
-        while(Integer.parseInt(input) != 1) {
+        input = player.nextLine();
+        int intInput = Integer.parseInt(input);
+
+        while((intInput != 1)||(input.isEmpty())) {
             System.out.println("Please type in 1 for now.");
             input = player.nextLine();
+            try{
+            intInput = Integer.parseInt(input);
+            } catch(Exception e) {continue;}
         }
+
+
+        
+        intInput =0;
+        while((intInput != 1)||(input.isEmpty())) {
+            input = player.nextLine();
+            try{
+                intInput = Integer.parseInt(input);
+                } catch(Exception e) {
+                    System.out.println("Please type in 1 for now.");
+                    continue;}
+            
+        }
+
+
         //player.close();
         return input;
 
@@ -65,11 +85,11 @@ public class tutorial {
         input = player.nextLine();
         System.out.println("You can practice whenever you want.");
         input = player.nextLine();
-        System.out.println("Just head home by entering 3 followed by the word home.");
+        System.out.println("Just head home by entering 3 followed by the number 1.");
         input = player.nextLine();
-        System.out.println("Then you can practice your rapping by then entering 2 followed by the word rap.");
+        System.out.println("Then you can practice your rapping by then entering 2 followed by the number 1.");
         input = player.nextLine();
-        System.out.println("Well, looks like you're good to go! Make sure to keep an eye on time and come meet me at the club at 21 (Military time) by typing in 3 followed by the word club.");
+        System.out.println("Well, looks like you're good to go! Make sure to keep an eye on time and come meet me at the club at 21 (Military time) by typing in 3 followed by the word club. \n");
         //player.close();
 
     }

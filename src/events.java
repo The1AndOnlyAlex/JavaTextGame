@@ -6,7 +6,7 @@ public class events {
 
     public static int clubPerform(int fame, int skill) {
         Random crowdRandomizer = new Random();
-        int crowdSize = crowdRandomizer.nextInt(fame);
+        int crowdSize = crowdRandomizer.nextInt(fame + 1);
         String input = "";
         Scanner player = new Scanner(System.in);
 
